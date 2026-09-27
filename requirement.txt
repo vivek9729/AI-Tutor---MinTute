@@ -1,0 +1,78 @@
+======================================================
+Software Requirements Specification (SRS)
+Project: MinTute — AI Tutor for CSE Students
+Version: 1.1
+======================================================
+
+1. PURPOSE
+MinTute is a web-based AI tutor built for computer science
+engineering students. It behaves like a mentor with 15+ years
+of teaching experience and covers coding, DSA, system design,
+interview preparation, code review, testing, and debugging.
+
+2. SCOPE
+2.1 In scope
+  - Conversational tutoring for beginner, intermediate, and
+    advanced learners.
+  - Persona-driven teaching: funny, simple, mentor-first;
+    hints before solutions (spoon-feeding only when a true
+    beginner needs a foundational example, e.g., Hello World).
+  - Code review, test suggestion, debugging guidance.
+  - Strict topic guardrails: only computer science engineering
+    questions are answered; off-topic requests receive a polite
+    fixed refusal.
+  - Streaming responses (Server-Sent Events) so learners see
+    answers as they are generated.
+  - Provider-agnostic model integration via API keys
+    (OpenAI-compatible incl. NVIDIA NIM and Groq, Anthropic,
+    Gemini, local Ollama, and an offline mock demo provider).
+  - Customizable UI theme, animations, and transitions through
+    a single configuration file (public/config/ui-config.js).
+  - Local-first run; deployable to any Node.js host.
+
+2.2 Out of scope
+  - General-purpose conversation (news, food, movies, etc.).
+  - Harmful or dishonest requests (hacking, exam cheating).
+
+3. USERS
+  - Beginner CSE students learning programming basics.
+  - Intermediate students practicing DSA and coding.
+  - Advanced learners preparing for system design and interviews.
+
+4. FUNCTIONAL REQUIREMENTS
+  FR-1  Chat interface with message history (last 12 turns).
+  FR-2  Learner level selector: beginner / intermediate / advanced.
+  FR-3  Session mode selector: chat, coding, dsa, system-design,
+        interview, review, debugging, testing.
+  FR-4  Request guardrail: off-topic requests are refused with:
+        "sorry i am a AI tutor made for helping computer science
+        students learn computer science concepts like coding.
+        If you want general purpose questions answer you can use
+        general purpose AI models".
+  FR-5  Response guardrail: model drift outside CSE topics is
+        replaced with the same refusal (also after streams end).
+  FR-6  Safety redirect for harmful/unethical requests.
+  FR-7  /api/chat (JSON + SSE streaming), /api/health,
+        /api/providers endpoints.
+  FR-8  Mock provider gives a guided mentor template offline
+        (and streams it, for UI testing).
+  FR-9  Sandbox script (npm run sandbox) demonstrates input/output
+        behavior without any API key.
+  FR-10 Theme/animation customization without touching logic files.
+
+5. NON-FUNCTIONAL REQUIREMENTS
+  NFR-1 Node.js 18.18+, zero runtime dependencies (stdlib only).
+  NFR-2 Readable, original code with comments where non-obvious.
+  NFR-3 Secrets only in .env (git-ignored); .env.example provided.
+  NFR-4 Respects prefers-reduced-motion; motion can be toggled in
+        ui-config.js.
+  NFR-5 Tests for guardrails, tutor message building, providers.
+  NFR-6 Deployable: `npm start` on any Node host; PORT configurable.
+
+6. SDLC PHASE DOCUMENTATION
+  - Planning & design: docs/project-plan.md
+  - Architecture: docs/architecture.md
+  - Implementation: src/, public/
+  - Testing: tests/ (node:test)
+  - Deployment: README.md
+======================================================

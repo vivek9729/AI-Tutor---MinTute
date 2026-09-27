@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MinTute — Your CS Mentor</title>
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <img src="/logo.svg" alt="MinTute logo" class="logo" />
+      <h1 class="app-name">MinTute</h1>
+      <p class="tagline">15+ years of teaching energy, zero spoon-feeding.</p>
+
+      <label class="control">
+        <span>Learner level</span>
+        <select id="level">
+          <option value="beginner">Beginner — just starting out</option>
+          <option value="intermediate" selected>Intermediate — knows some code</option>
+          <option value="advanced">Advanced — push me hard</option>
+        </select>
+      </label>
+
+      <label class="control">
+        <span>Session mode</span>
+        <select id="mode">
+          <option value="chat" selected>General CSE tutoring</option>
+          <option value="coding">Coding help</option>
+          <option value="dsa">DSA practice</option>
+          <option value="system-design">System design</option>
+          <option value="interview">Interview preparation</option>
+          <option value="review">Code review</option>
+          <option value="debugging">Debugging</option>
+          <option value="testing">Testing</option>
+        </select>
+      </label>
+
+      <div class="provider-box">
+        <strong>Provider:</strong>
+        <span id="providerStatus">checking…</span>
+      </div>
+
+      <button id="clearBtn" class="ghost-button">Clear conversation</button>
+      <p class="hint">MinTute answers only computer science topics — coding, DSA, system design, and interview prep.</p>
+    </aside>
+
+    <main class="chat-area">
+      <header class="chat-header">
+        <h2>Ask MinTute</h2>
+        <p>A mentor who teaches you to solve problems yourself.</p>
+      </header>
+
+      <section id="chatLog" class="chat-log" aria-live="polite"></section>
+
+      <form id="chatForm" class="composer">
+        <textarea id="messageInput" rows="2" placeholder="Ask about coding, DSA, system design, interviews…" required></textarea>
+        <button type="submit" id="sendBtn">Teach me ➜</button>
+      </form>
+    </main>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

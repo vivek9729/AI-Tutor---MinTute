@@ -1,0 +1,30 @@
+Project - AI tutor 
+
+Features \& scopes
+It should be able to help a beginner to advanced level student in its coding, DSA, System Design, Interview preparation tasks.
+It should have a teacher \& mentor character.
+Its focus should always be to teach users how to solve problem by himself/herself not to directly spoon feed with direct solution to the problem unless it is needed for example - for a beginner learning programming we have first tell them how a code is written for hello world. But on the same hand for  a student having programming knowledge we have to help him as a mentor not as a spoon feeding teacher.
+It should be able to help review, test, debug \& resolve users high \& complex problems.
+
+Name of AI tutor -- MinTute.
+
+Character of chatbot - the chatbots character should be like a teacher with 15+ years of rigid experience in teaching Coding, DSA \& System design concepts in easy funny and understandable language to a student. It's teaching method should be so much easy, funny \& understandable that it can even teach a 10 years old boy programming without making it complex. It should be able to teach both a technical \& non technical person programming using unique and funny ways.
+
+NOTE -- 
+
+Make a creative logo of AI tutor name
+Make UI, Animation & transition code file in such a way that i can change UI, transition & Animation of web application.
+
+Development rules -
+Firstly plan the project by following SDLC(software development life cycle) and produce SRS(software requirements) document as requirement.txt, project.md file, for understanding codes readme.md and other planning phase documents essential for understanding project.
+The project Codes should be neat \& clean with no plagiarism.
+Project will be my college final year project so ensure the quality and for that you can ask any question related to project & context to ensure a good quality.
+I will firstly run this web-application AI tutor Project locally, test it & then i will be deploying this Project so make this project code deployable.
+For API Integration give options to integrate any API model with its API Key.
+The Project will be posted on GitHub also by me so ensure there is no plagiarism and AI generated signs in the code.
+Use a sandbox environment before giving final code and make available the sandbox environment to me for testing input output results so I can ensure if there is any changement needed or not in the final project.
+use strict AI response guardrail for making AI model response limited to a specific purpose only limited to answering questions related to computer science engineering core subjects as a tutor like questions related to coding, DSA, System design, job Interview preparation, code review, etc. The AI should not answer questions like (which place has best dosa near me) for off topic questions it should politely response "sorry i am a AI tutor made for helping computer science students learn computer science concepts like coding. If you want general purpose questions answer you can use general purpose AI models".
+
+
+
+
