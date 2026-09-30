@@ -63,7 +63,7 @@ Any Node host works:
 ```bash
 PORT=8080 npm start
 ```
-Keep `.env` on the server only; it is git-ignored.
+
 
 ## 📁 Structure
 ```
