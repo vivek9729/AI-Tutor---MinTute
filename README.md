@@ -83,4 +83,3 @@ docs/                Planning & architecture docs
 requirement.txt      SRS
 ```
 
-> Final year project. Original code. Contributions welcome.
